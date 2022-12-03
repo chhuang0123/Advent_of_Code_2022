@@ -72,13 +72,13 @@ def get_score_2(opponent_shape, my_shape):
 if __name__ == '__main__':
     filename = sys.argv[1]
 
-    sum_1 = 0
-    sum_2 = 0
+    sum_part_1 = 0
+    sum_part_2 = 0
     with open(filename, 'r') as f:
         for line in f.readlines():
             shapes = line.strip().split()
-            sum_1 += get_score(shapes[0], shapes[1])
-            sum_2 += get_score_2(shapes[0], shapes[1])
+            sum_part_1 += get_score(shapes[0], shapes[1])
+            sum_part_2 += get_score_2(shapes[0], shapes[1])
 
-    print(sum_1)
-    print(sum_2)
+    print(f'part 1: {sum_part_1}')
+    print(f'part 2: {sum_part_2}')

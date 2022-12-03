@@ -11,5 +11,6 @@ if __name__ == '__main__':
             sum_list.append(sum_value)
 
     sum_list.sort(reverse=True)
-    print(sum_list[0])
-    print(sum(sum_list[0:3]))
+
+    print(f'part 1: {sum_list[0]}')
+    print(f'part 2: {sum(sum_list[0:3])}')
