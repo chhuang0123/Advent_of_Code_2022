@@ -12,7 +12,7 @@
             "console": "integratedTerminal",
             "cwd": "${fileDirname}",
             "justMyCode": true,
-            "stopOnEntry": true,
+            "stopOnEntry": false,
             "args": [
                 "test.txt"
             ],
