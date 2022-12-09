@@ -8,7 +8,7 @@ class File:
         self.prefix = '/' if prefix == '/' else prefix[1:]
 
     def __str__(self):
-        return f'prefix: {self.prefix}, name: {self.name}, size: {self.size}, fullname: {self.fullname}'
+        return f'prefix: {self.prefix}, name: {self.name}, size: {self.size}'
 
 
 if __name__ == '__main__':
@@ -45,3 +45,9 @@ if __name__ == '__main__':
 
     result = sum([v for v in dirs.values() if v < 100000])
     print(f'part 1: {result}')
+
+    total_space = 70000000
+    desired_space = 30000000
+    free_space = total_space - dirs['/']
+    result = sorted([v for v in dirs.values() if v > (desired_space - free_space)])
+    print(f'part 2: {result[0]}')
